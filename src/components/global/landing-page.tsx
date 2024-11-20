@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
-  Bot,
   Globe,
   MessageSquare,
   Zap,
@@ -292,13 +291,13 @@ export default function LandingPage() {
                 step: 2,
                 title: "AI-Powered Analysis",
                 description:
-                  "Our advanced AI reads, understands, and contextualizes the website's content in seconds.",
+                  "Our advanced AI reads, understands, and contextualizes the websites content in seconds.",
               },
               {
                 step: 3,
                 title: "Ask Anything",
                 description:
-                  "Interact with Skyforge by asking any questions about the website's content, structure, or purpose.",
+                  "Interact with Skyforge by asking any questions about the websites content, structure, or purpose.",
               },
               {
                 step: 4,
@@ -310,7 +309,7 @@ export default function LandingPage() {
                 step: 5,
                 title: "Explore Further",
                 description:
-                  "Use Skyforge's insights to dive deeper, compare websites, or gather specific information effortlessly.",
+                  "Use Skyforges insights to dive deeper, compare websites, or gather specific information effortlessly.",
               },
             ].map((item, index) => (
               <motion.div
@@ -347,7 +346,7 @@ export default function LandingPage() {
                 name: "Alex Chen",
                 role: "Digital Marketer",
                 quote:
-                  "Skyforge has revolutionized my research process. It's like having a brilliant research assistant available 24/7.",
+                  "Skyforge has revolutionized my research process. Its like having a brilliant research assistant available 24/7.",
               },
               {
                 name: "Sarah Johnson",
@@ -359,7 +358,7 @@ export default function LandingPage() {
                 name: "Michael Brown",
                 role: "SEO Specialist",
                 quote:
-                  "Skyforge's ability to quickly analyze competitors' websites has given me a significant edge in my SEO strategies.",
+                  "Skyforges ability to quickly analyze competitors websites has given me a significant edge in my SEO strategies.",
               },
             ].map((testimonial, index) => (
               <motion.div
