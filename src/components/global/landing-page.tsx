@@ -19,12 +19,14 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
   const [url, setUrl] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const router = useRouter();
 
   useEffect(() => {
     if (inView) {
@@ -48,6 +50,14 @@ export default function LandingPage() {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleSubmit = (
+    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.preventDefault();
+    console.log("Analyzing website:", url);
+    router.push(`/chat/${url}`);
   };
 
   return (
@@ -189,7 +199,7 @@ export default function LandingPage() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <form className="flex" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex" onSubmit={handleSubmit}>
               <Input
                 type="url"
                 placeholder="Enter website URL"
